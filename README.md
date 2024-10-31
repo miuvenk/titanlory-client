@@ -1,4 +1,4 @@
-# Frontend for Project
+# Titanlory Client
 
 ## Overview
 This is the frontend client for the project, built with React, Redux and Tailwind CSS. It provides an interactive UI for viewing and searching the leaderboard, with dark mode support.
