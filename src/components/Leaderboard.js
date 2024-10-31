@@ -61,7 +61,7 @@ const Leaderboard = () => {
                 </button> */}
             </div>
             <div className="grid grid-cols-1 gap-4">
-                <div className="grid grid-cols-5 gap-5 p-4 rounded-lg font-extrabold text-md shadow-2xl
+                <div className="grid grid-cols-[1fr,2fr,3fr,2fr,2fr] gap-5 p-4 rounded-lg font-extrabold text-md shadow-2xl
       bg-gray-100 text-green-800 dark:bg-blue-950 dark:text-teal-200 ">
                     <span>Rank</span>
                     <span>Name</span>

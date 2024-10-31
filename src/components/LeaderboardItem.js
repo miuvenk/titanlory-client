@@ -20,7 +20,7 @@ const LeaderboardItem = forwardRef(({ player, isHighlighted }, ref) => {
   return (
     <div
       ref={ref}
-      className={`grid grid-cols-5 gap-6 py-2 px-4 rounded-lg shadow-lg mb-1
+      className={`grid grid grid-cols-[1fr,2fr,3fr,2fr,2fr] gap-6 py-2 px-4 rounded-lg shadow-lg mb-1
       ${player.rank === 1 ? 'bg-blue-300 ' :
           player.rank === 2 ? 'bg-blue-200' :
             player.rank === 3 ? 'bg-blue-100' :
@@ -51,20 +51,20 @@ const LeaderboardItem = forwardRef(({ player, isHighlighted }, ref) => {
         {player.country}
       </span>
       <span className="text-green-800 font-bold dark:text-green-300 flex items-center">${(player.money).toFixed(2)}</span>
-      <span className="flex items-center space-x-1 font-bold flex row items-center">
+      <span className="flex items-center space-x-1 font-bold flex row items-center text-xs sm:text-sm md:text-md lg:text-md">
         {player.dailyDiff > 0 && (
           <span className="text-green-800 dark:text-green-300">
-           <ArrowCircleUpIcon className="text-xs sm:text-sm md:text-lg lg:text-xl"/> {player.dailyDiff}
+           <ArrowCircleUpIcon style={{fontSize:'inherit'}} className="text-xs sm:text-sm md:text-md lg:text-md"/> {player.dailyDiff}
           </span>
         )}
         {player.dailyDiff === 0 && (
           <span className="text-yellow-500 dark:text-yellow-300">
-            <RemoveCircleOutlineIcon className="text-xs sm:text-sm md:text-lg lg:text-xl"/>  {player.dailyDiff}
+            <RemoveCircleOutlineIcon style={{fontSize:'inherit'}} className="text-xs sm:text-sm md:text-md lg:text-md"/>  {player.dailyDiff}
           </span>
         )}
         {player.dailyDiff < 0 && (
           <span className="text-red-800 dark:text-red-400">
-           <ArrowCircleDownIcon className="text-xs sm:text-sm md:text-lg lg:text-xl"/> {player.dailyDiff}
+           <ArrowCircleDownIcon style={{fontSize:'inherit'}} className="text-xs sm:text-sm md:text-md lg:text-md"/> {player.dailyDiff}
           </span>
         )}
       </span>
