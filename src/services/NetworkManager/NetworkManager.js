@@ -43,21 +43,25 @@ export default{
     },
 
     async sendGetRequest(path, headers){
-        const response = await axios.get(API_URL + path, {headers:headers})
+        const url = API_URL + path;
+        const response = await axios.get(url, {headers:headers})
         return response;
     },
 
     async sendPostRequest(path, data, headers){
-        const response = await axios.post(API_URL + path, data, {headers:headers})
+        const url = API_URL + path;
+        const response = await axios.post(url, data, {headers:headers})
         return response;
     },
 
     async sendPutRequest(path, data, headers){
-        const response = await axios.get(API_URL + path, data, {headers:headers})
+        const url = API_URL + path;
+        const response = await axios.get(url, data, {headers:headers})
         return response;
     },
     async sendDeleteRequest(path, data, headers){
-        const response = await axios.get(API_URL + path, {headers:headers, data: data})
+        const url = API_URL + path;
+        const response = await axios.get(url, {headers:headers, data: data})
         return response;
     }
 
